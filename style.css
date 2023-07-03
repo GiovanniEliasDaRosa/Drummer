@@ -1,0 +1,163 @@
+body{
+  background-color: rgb(54, 54, 54);
+  color: rgb(221, 221, 221);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main{
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+main *{
+  text-align: center;
+  display: block;
+  font-size: 32px;
+  height: 1.8em;
+  margin: 0;
+  padding: 0;
+}
+
+main p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+@keyframes Fade {
+  0%{
+    /* background-color: rgb(255, 255, 255); */
+    /* filter: brightness(150%) saturate(150%) grayscale(100%); */
+    filter: brightness(1.5) contrast(1.5) grayscale(1);
+  }
+  100%{
+    /* background-color: rgb(86, 174, 255); */
+    filter: brightness(100%);
+  }
+}
+
+/* Audio stuff */
+audio::-webkit-media-controls-panel {
+  background-color: rgb(86, 174, 255);
+  display: grid;
+  grid-template-columns: 1fr 0fr;
+  overflow: hidden;
+  animation: Fade 1s ease-out;
+}
+
+audio::-webkit-media-controls-mute-button{
+  display: none;
+  opacity: 0;
+}
+
+audio::-webkit-media-controls-play-button {
+  display: none;
+  opacity: 0;
+}
+
+audio::-webkit-media-controls-current-time-display {
+  display: none;
+  opacity: 0;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+  opacity: 0;
+}
+
+audio::-webkit-media-controls-timeline {
+  display: none;
+  opacity: 0;
+}
+
+audio::-webkit-media-controls-configurations {
+  display: none;
+  opacity: 0;
+}
+
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-volume-slider:hover {
+  box-shadow: 0 0 0 0 transparent !important;
+  background-color: transparent !important;
+  width: 100% !important;
+  opacity: 1 !important;
+}
+
+
+/* KEYS */
+#KeyPressed{
+  padding: 16px;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.125);
+  width: max-content;
+  margin-top: 2em;
+
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+}
+
+.Key{
+  width: 64px;
+  height: 64px;
+  font-size: 48px;
+  margin: 0px;
+  background-color: rgb(132, 132, 132);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+
+  border-bottom: solid 2px rgb(183, 183, 183);
+
+  box-shadow: 0px 8px 0px 0px rgb(100, 100, 100);
+  transform: translateY(-8px);
+
+  animation: KeyPress 2s ease-out forwards;
+}
+
+#KeyToPress{
+  padding: 16px;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.125);
+  width: max-content;
+  margin-top: 2em;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+}
+
+.Longer{
+  animation: KeyPress 4s ease-out infinite;
+}
+
+@keyframes KeyPress {
+  0%{
+    box-shadow: 0px 8px 0px 0px rgb(100, 100, 100);
+    transform: translateY(-8px);
+  }
+  50%{
+    box-shadow: 0px 0px 0px 0px rgb(100, 100, 100);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100%{
+    box-shadow: 0px 0px 0px 0px rgb(100, 100, 100);
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
