@@ -1,44 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drummer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drummer</title>
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="KeyToPress">
-    <p class="Key Longer">A</p>
-    <p class="Key Longer">S</p>
-    <p class="Key Longer">D</p>
-    <p class="Key Longer">F</p>
-    <p class="Key Longer">G</p>
-    <p class="Key Longer">H</p>
-  </div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="KeyToPress">
+      <p class="Key Longer">A</p>
+      <p class="Key Longer">S</p>
+      <p class="Key Longer">D</p>
+      <p class="Key Longer">F</p>
+      <p class="Key Longer">G</p>
+      <p class="Key Longer">H</p>
+    </div>
 
-  <main>
-    <p>Kick1</p>
-    <audio src="audio/Kick1.wav"    id="Kick1"    controls oninput="Changed(this)"></audio>
-    <p>Kick2</p>
-    <audio src="audio/Kick2.wav"    id="Kick2"    controls oninput="Changed(this)"></audio>
-    <p>Snare1</p>
-    <audio src="audio/Snare1.wav"   id="Snare1"   controls oninput="Changed(this)"></audio>
-    <p>Snare2</p>
-    <audio src="audio/Snare2.wav"   id="Snare2"   controls oninput="Changed(this)"></audio>
-    <p>Hit</p>
-    <audio src="audio/Hit.wav"      id="Hit"      controls oninput="Changed(this)"></audio>
-    <p>OpenHit</p>
-    <audio src="audio/OpenHit.wav"  id="OpenHit"  controls oninput="Changed(this)"></audio>
-  </main>
+    <main>
+      <p>Kick1</p>
+      <audio src="audio/Kick1.wav" id="Kick1" controls oninput="Changed(this)"></audio>
+      <p>Kick2</p>
+      <audio src="audio/Kick2.wav" id="Kick2" controls oninput="Changed(this)"></audio>
+      <p>Snare1</p>
+      <audio src="audio/Snare1.wav" id="Snare1" controls oninput="Changed(this)"></audio>
+      <p>Snare2</p>
+      <audio src="audio/Snare2.wav" id="Snare2" controls oninput="Changed(this)"></audio>
+      <p>Hit</p>
+      <audio src="audio/Hit.wav" id="Hit" controls oninput="Changed(this)"></audio>
+      <p>OpenHit</p>
+      <audio src="audio/OpenHit.wav" id="OpenHit" controls oninput="Changed(this)"></audio>
+    </main>
 
-  <div id="KeyPressed">
-  </div>
+    <div id="KeyPressed"></div>
 
-  <template id="KeyPressedTemplate">
-    <p class="Key">A</p>
-  </template>
+    <template id="KeyPressedTemplate">
+      <p class="Key">A</p>
+    </template>
 
-  <script src="Code.js"></script>
-</body>
+    <script src="Code.js"></script>
+
+    <a href="https://github.com/GiovanniEliasDaRosa/Drummer">GitHub Repo</a>
+  </body>
 </html>
